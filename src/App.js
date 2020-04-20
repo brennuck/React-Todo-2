@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 
 import Todo from './components/Todo';
 import TodoList from "./components/TodoList";
+import TodoForm from "./components/TodoForm";
 
 const items = [
   {
@@ -41,6 +42,7 @@ class App extends React.Component {
     return (
       <div>
         <h2>Todo List</h2>
+        <TodoForm addItem={this.addItem} />
         <TodoList items={this.state.items} />
       </div>
     );
